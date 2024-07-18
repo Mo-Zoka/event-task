@@ -1,0 +1,114 @@
+/* Navbar start */
+
+.navbar {
+  background-color: white;
+  height: 80px;
+  margin: 10px;
+  border-radius: 18px;
+  padding: 0.8rem;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: 500;
+  color: #4268c7;
+}
+
+.navbar-brand:hover {
+  color: #4268c7;
+}
+.navbar-toggler {
+  border: none;
+  font-size: 1.25rem;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.nav-link {
+  color: gray;
+  font-weight: 600;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: black;
+}
+
+@media (min-width: 767px) {
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #4268c7;
+    transition: 0.3s ease-in-out;
+  }
+
+  .nav-link:hover::before,
+  .nav-link.active::before {
+    width: 85%;
+  }
+}
+/* Navbar end */
+
+/* table start */
+
+.search-bar:focus , .search-bar2:focus , .search-bar3:focus{
+    box-shadow: none;
+    border-width: 2px;
+    border-color: #4268c7;
+}
+
+.my-color {
+  color: #4268c7;
+}
+
+.table {
+  padding-top: 30px;
+}
+
+.order-data {
+    cursor: pointer;
+}
+
+.customer-name {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.customer-name:hover {
+  background-color: #4268c7;
+  color: white;
+}
+
+/* table end */
+
+/* loading screen */
+.loading {
+  z-index: 999;
+  background-color: white;
+  display: none;
+}
+
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  --_c: no-repeat radial-gradient(farthest-side,#4268c7 92%, #0000);
+  background: var(--_c) top, var(--_c) left, var(--_c) right, var(--_c) bottom;
+  background-size: 12px 12px;
+  animation: l7 1s infinite;
+}
+@keyframes l7 {
+  to {
+    transform: rotate(0.5turn);
+  }
+}
+/* loading screen */

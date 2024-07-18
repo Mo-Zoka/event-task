@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction</title>
+    <!-- google fonts-->
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md fixed">
+        <div class="container">
+            <a class="navbar-brand" href="">Virtual Bank</a>
+            <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Virtual Bank</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-1">
+                        <li class="nav-item">
+                            <a class="nav-link mx-md-2 active" aria-current="page" href="#" id="dashboard">Dashboard</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="graph container pt-2">
+        <h3 class="pb-3 container">Overview of <span class="my-color">all customers</span></h3>
+        <div>
+            <canvas id="myChart"></canvas>
+        </div>
+    </section>
+
+
+    <section class="table pb-5 mt-4">
+        <h3 class="pb-3 container">Transactions by <span class="my-color">all customers</span></h3>
+        <div class="container d-flex justify-content-between py-3">
+            <div class="input-group rounded w-25">
+                <span class="input-group-text border-0 pe-3" id="search-addon">
+                    <i class="fas fa-search"></i>
+                </span>
+                <input type="text" class="search-bar form-control rounded" placeholder="Search by customer"/>
+            </div>
+            <div class="input-group rounded w-25">
+                <span class="input-group-text border-0 pe-3" id="search-addon">
+                    <i class="fas fa-search"></i>
+                </span>
+                <input type="text" class="search-bar2 form-control rounded" placeholder="Search by money"/>
+            </div>
+        </div>
+        <div class="container">
+            <div class="table-responsive">
+                <table class="table table-responsive table-borderless">
+
+                    <thead>
+                        <tr class="bg-light">
+                            <th class="order-data" data-column="id" data-order="asc" scope="col" width="10%">&#9660</th>
+                            <th scope="col" width="30%">Date</th>
+                            <th scope="col" width="30%">Customer</th>
+                            <th class="order-data text-end" data-column="amount" data-order="asc" scope="col"
+                                width="30%">Amount &#9660</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-data">
+                        <!-- <tr>
+                            <td>id</td>
+                            <td>1 Oct, 21</td>
+                            <td>name</td>
+                            <td class="text-end"><span class="fw-bolder">$0.99</span></td>
+                        </tr> -->
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="graph container pt-2 pb-5 mb-3">
+        <h3 class="pb-3 container">Customer's <span class="my-color">all transactions</span></h3>
+        <div>
+            <canvas id="myChart2"></canvas>
+        </div>
+    </section>
+
+    <section
+        class="loading position-fixed top-0 start-0 end-0 bottom-0 w-100 h-100 justify-content-center align-items-center">
+        <div class="loader"></div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
