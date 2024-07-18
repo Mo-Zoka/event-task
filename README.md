@@ -1,5 +1,3 @@
-# My Project
-
 ## Demo
 Check out the live demo [here](https://mo-zoka.github.io/event-task/).
 
