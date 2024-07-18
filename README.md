@@ -1,10 +1,9 @@
 # My Project
 
 ## Demo
-Check out the live demo [here]().
+Check out the live demo [here](https://mo-zoka.github.io/event-task/).
 
-## Installation
-1-(Install dependencies)
+## Install dependencies
 npm install
-2-(Run the local json server)
+## Run the local json server
 npx json-server db.json
